@@ -4,8 +4,7 @@ Small sample application for adding notes. Front end app is developed on Angular
 
 ### Assignment Step Description
 
-In this case study Keep Note Step 6, we will implement JWT (JSON Web Token) on top of Keep Note Step 5 Assignment. JSON Web Token (JWT) is an open standard (RFC 7519) that 
-defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is
+In this case study Keep Note Step 6, we will implement JWT (JSON Web Token) on top of Keep Note Step Assignment. JSON Web Token (JWT) is an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is
 digitally signed.
 
 In this step, we will create this application in five parts 
