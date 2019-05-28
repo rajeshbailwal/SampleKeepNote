@@ -9,7 +9,7 @@ digitally signed.
 
 In this application, technologies are Angular, .Net core Web API's, SQL server, Mongo 
 
-# ********* ClientAPP ********:
+# ********* ClientAPP ********
 
 # AngularSpa
 
