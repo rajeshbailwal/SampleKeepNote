@@ -1,0 +1,23 @@
+<div class="login-container">
+  <h2 class="jumbotron">Register Form</h2>
+
+   <!-- <form action="" [formGroup]="loginForm" class="login-form" (ngSubmit)="loginSubmit(loginForm)"> -->
+  <div class="login-form">
+    <mat-form-field>
+      <input class="username" matInput placeholder="Enter UserName" [formControl]="username">
+      <mat-error *ngIf="username.invalid">{{userNameErrorMessage()}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input class="password" matInput type="password" placeholder="Enter Password" [formControl]="password">
+      <mat-error *ngIf="password.invalid">{{passwordErrorMessage()}}</mat-error>
+    </mat-form-field>
+    <div class="login-btn">
+      <mat-error *ngIf="showRegister">{{getUserNotFoundError()}}</mat-error>
+      <button mat-raised-button color="primary" [disabled]="username.invalid || password.invalid" (click)="registerUser()" >Register</button>
+      <button mat-raised-button (click)="clear()" color="accent">Clear</button>
+      <button mat-raised-button (click)="loginpage()">
+        <mat-icon>home</mat-icon>
+    </button>
+    </div>
+</div>

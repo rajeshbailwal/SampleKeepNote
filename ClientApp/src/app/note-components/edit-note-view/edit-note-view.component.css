@@ -1,0 +1,19 @@
+.keep-c-note-taker-form {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  font-size: 1.5rem;
+}
+
+.keep-c-done-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.example-chip-list {
+  width: 100%;
+}
+
+.error-message {
+  color: red;
+}

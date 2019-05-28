@@ -1,0 +1,47 @@
+<!-- Expansion panel to add new notes -->
+<div class="div-mat-expansn-panel">
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Add Tag
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <form #myForm="ngForm"  >
+      <div class="mat-form-field-wrapper">
+        <mat-form-field>
+          <input [(ngModel)]="tag.name" matInput placeholder="name" type="text" required id="name" name="name">
+          <!-- <small *ngIf="title.invalid && title.hasError('required')">
+                Title and Text both are required fields
+            </small> -->
+        </mat-form-field>
+
+        <mat-form-field>
+          <textarea matInput [(ngModel)]="tag.description" placeholder="description" required id="description" name="description"></textarea>
+          <!-- <small *ngIf="(text.touched || text.dirty) && text.invalid">
+                    Title and Text both are required fields
+                  </small> -->
+        </mat-form-field>
+
+        <div class="div-mat-expansn-panel-button">
+
+          <button mat-button (click)='addTag(myForm)'>Done</button>
+        </div>
+      </div>
+     </form>
+  </mat-expansion-panel>
+</div>
+
+
+<div class="keep-c-note-container">
+
+   <mat-card class="keep-note-card" *ngFor='let tag of tags' #matcard>
+    <mat-card-title>{{tag.name}}</mat-card-title>
+    <mat-card-content>{{tag.description}}</mat-card-content>
+    
+    <mat-card-actions class="keep-note-action-buttons">
+    <button mat-icon-button (click)="deleteTag(event, tag.id);$event.stopPropagation()"> 
+      <i class="material-icons"> delete   </i></button>
+    </mat-card-actions>
+  </mat-card>
+</div>

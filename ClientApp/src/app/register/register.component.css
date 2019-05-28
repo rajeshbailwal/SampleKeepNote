@@ -1,0 +1,20 @@
+.login-container {
+  width:60vw;
+  margin:10vh auto;
+  margin-top: 5vh !important;
+}
+
+
+.login-form{
+  display: flex;
+  flex-direction: column;
+}
+
+mat-form-field {
+  margin-top: 1.5rem;
+}
+
+
+.form-login-submit {
+  margin-top: 1.5rem;
+}

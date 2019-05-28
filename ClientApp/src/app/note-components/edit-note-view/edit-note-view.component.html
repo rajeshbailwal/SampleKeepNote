@@ -1,0 +1,37 @@
+<!-- Label to display any error messages -->
+<label class="error-message">{{ errMessage }}</label>
+
+<div class="keep-c-note-taker-form">
+  <mat-form-field>
+    <input [(ngModel)]="note.title" name="editTitle" matInput placeholder="Title" type="text">
+  </mat-form-field>
+  <mat-form-field>
+    <textarea [(ngModel)]="note.content" name="editText" matInput placeholder="Text"></textarea>
+  </mat-form-field>
+  
+
+    <mat-form-field class="example-full-width">
+      <input type="text" [(ngModel)]="tagText" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto" 
+      placeholder="tag" id="tag" name="tag" >
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+          {{option}}
+        </mat-option>
+      </mat-autocomplete>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+      <input type="text" [(ngModel)]="reminderText" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControlReminder" [matAutocomplete]="autoCompleteReminder" 
+      placeholder="reminder" id="reminder" name="reminder" >
+      <mat-autocomplete #autoCompleteReminder="matAutocomplete">
+        <mat-option *ngFor="let option of filteredOptionsReminders | async" [value]="option">
+          {{option}}
+        </mat-option>
+      </mat-autocomplete>
+  </mat-form-field>
+
+
+</div>
+<div class="keep-c-done-wrapper">
+  <button mat-raised-button color="primary" (click)="onSave()">Save</button>
+</div>

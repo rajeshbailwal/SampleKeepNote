@@ -1,0 +1,16 @@
+C:\Users\adminvm\Desktop\FinalAssignment\KeepNoteAPIs\AuthenticationService\AuthenticationService
+docker build -t authservice .
+
+C:\Users\adminvm\Desktop\FinalAssignment\KeepNoteAPIs\CategoryService\CategoryService.API
+docker build -t categoryservice .
+
+C:\Users\adminvm\Desktop\FinalAssignment\KeepNoteAPIs\NoteService\NoteService.API
+docker build -t notesservice .
+
+C:\Users\adminvm\Desktop\FinalAssignment\KeepNoteAPIs\ReminderService\ReminderService.API
+docker build -t remindeservice .
+
+C:\Users\adminvm\Desktop\FinalAssignment\ClientApp
+docker build -t keepnoteclientapp .
+
+docker ps -a

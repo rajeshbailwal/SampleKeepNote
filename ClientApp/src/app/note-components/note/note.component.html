@@ -1,0 +1,11 @@
+<mat-card class="keep-note-card" (click)='openEditView()' #matcard>
+  <mat-card-title>{{note.title}}</mat-card-title>
+  <mat-card-content>{{note.content}}</mat-card-content>
+  <mat-chip-list>
+    <mat-chip *ngIf="note.category!=null && note.category.name !=''" [color]="primary"><span class='glyphicon glyphicon-tag'></span>{{ note.category.name }}</mat-chip>
+    <mat-chip *ngIf="note.reminders!=null && note.reminders.length >0" [color]="primary"><span class='glyphicon glyphicon-bookmark'></span>{{ note.reminders[0].name }}</mat-chip>
+  </mat-chip-list>
+  <mat-card-actions class="keep-note-action-buttons">
+    <button mat-icon-button (click)="deleteNote($event, note.id);$event.stopPropagation()"> <i class="material-icons"> delete   </i></button>
+  </mat-card-actions>
+</mat-card>

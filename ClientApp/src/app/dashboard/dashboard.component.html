@@ -1,0 +1,99 @@
+<!-- Label to display any error messages -->
+
+
+<!-- Expansion panel to add new notes -->
+<div class="div-mat-expansn-panel">
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Take a Note
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <form #myForm="ngForm">
+      <div class="mat-form-field-wrapper">
+        <mat-form-field>
+          <input [(ngModel)]="note.title" matInput placeholder="title" type="text" required id="title" name="title">
+          <!-- <small *ngIf="title.invalid && title.hasError('required')">
+                Title and Text both are required fields
+            </small> -->
+        </mat-form-field>
+
+        <mat-form-field>
+          <textarea matInput [(ngModel)]="note.content" placeholder="text" required id="content"
+            name="content"></textarea>
+          <!-- <small *ngIf="(text.touched || text.dirty) && text.invalid">
+                    Title and Text both are required fields
+                  </small> -->
+        </mat-form-field>
+
+        <!-- <mat-form-field class="example-chip-list">
+          <mat-chip-list #chipList>
+            <mat-chip *ngFor="let tag of note.tags" [selectable]="selectable" [removable]="removable"
+              (removed)="remove(tag)">
+              {{ tag }}
+              <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+            </mat-chip>
+            <input placeholder="Tags..." [matChipInputFor]="chipList"
+              [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
+              (matChipInputTokenEnd)="add($event)" maxlength="20">
+          </mat-chip-list>
+         </mat-form-field> -->
+        <!-- <small *ngIf="note.tags?.length === 5" class="error-message">max 5 tags allowed</small> -->
+
+          <mat-form-field class="example-full-width">
+              <input type="text" [(ngModel)]="tagText" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto" 
+              placeholder="tag" id="tag" name="tag" >
+              <mat-autocomplete #auto="matAutocomplete">
+                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                  {{option}}
+                </mat-option>
+              </mat-autocomplete>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+              <input type="text" [(ngModel)]="reminderText" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControlReminder" [matAutocomplete]="autoCompleteReminder" 
+              placeholder="reminder" id="reminder" name="reminder" >
+              <mat-autocomplete #autoCompleteReminder="matAutocomplete">
+                <mat-option *ngFor="let option of filteredOptionsReminders | async" [value]="option">
+                  {{option}}
+                </mat-option>
+              </mat-autocomplete>
+          </mat-form-field>
+
+        <!-- <mat-autocomplete #auto="matAutocomplete" >
+            <mat-option *ngFor="let option of tags" [value]="option.name" >
+              {{ option.name }}
+            </mat-option>
+          </mat-autocomplete>  -->
+
+        
+
+
+        <div class="div-mat-expansn-panel-button">
+
+          <button mat-button (click)='takeNotes(myForm)'>Done</button>
+        </div>
+      </div>
+    </form>
+  </mat-expansion-panel>
+</div>
+<!-- Load and display the collection of notes from server as Material Cards with card title set to note title and card content set to note text  -->
+
+<div class="keep-c-note-container">
+
+  <!-- Include the notes collection with each note rendered as a separate NoteComponent -->
+  <app-note [note]="note" *ngFor='let note of notes' (deleteEvent)="deleteNote($event)">
+  </app-note>
+</div>
+
+<router-outlet></router-outlet>
+<!--<router-outlet name="noteEditOutlet"></router-outlet>-->
+<!--<div class="container mt-5 notes-card-containeer" (click)="openEditView()">
+  <div class="row">
+    <mat-card *ngFor="let note of notes" class="mb-3 ml-3 notes-card">
+      <mat-card-title>{{note.title}}</mat-card-title>
+      <mat-card-subtitle>{{note.text}}</mat-card-subtitle>
+    </mat-card>
+  </div>
+</div>-->

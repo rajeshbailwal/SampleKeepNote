@@ -1,0 +1,73 @@
+{
+  "notes": [
+    {
+      "title": "Angular Assignment 1h",
+      "text": "Complete by Sept 2018 updated",
+      "state": "completed",
+      "id": 2,
+      "tags": [
+        "fhfh"
+      ]
+    },
+    {
+      "title": "Angular Assignment 2",
+      "text": "Complete by Oct 2018",
+      "state": "completed",
+      "id": 3
+    },
+    {
+      "title": "Angular Assignment 3",
+      "text": "Complete by Nov 2018",
+      "state": "started",
+      "id": 4
+    },
+    {
+      "title": ".Net core assignment 1",
+      "text": "Complete by Dec 2018",
+      "state": "completed",
+      "id": 5
+    },
+    {
+      "title": ".Net core assignment 2",
+      "text": "Complete by Dec 2018",
+      "state": "completed",
+      "id": 6
+    },
+    {
+      "title": ".Net core assignment 3",
+      "text": "Complete by Dec 2018",
+      "state": "completed",
+      "id": 7
+    },
+    {
+      "title": ".Net core assignment 4",
+      "text": "Complete by Dec 2018",
+      "state": "completed",
+      "id": 8
+    },
+    {
+      "title": ".Net core assignment 5",
+      "text": "Complete by Dec 2018",
+      "state": "completed",
+      "id": 9
+    },
+    {
+      "title": ".Net core assignment 6",
+      "text": "Complete by Dec 2018",
+      "state": "started",
+      "id": 10
+    },
+    {
+      "title": ".Net core assignment 7",
+      "text": "Complete by Dec 2018",
+      "state": "not-started",
+      "id": 11
+    },
+    {
+      "title": ".Net core assignment 8",
+      "text": "Complete by Dec 2018",
+      "state": "not-started",
+      "id": 12
+    }
+  ]
+}

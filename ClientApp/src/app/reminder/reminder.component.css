@@ -1,0 +1,69 @@
+.mat-form-field-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .div-mat-expansn-panel {
+    width: 70%;
+    margin: auto;
+  }
+  
+  .mat-form-field-wrapper > * {
+    width: 100%;
+  }
+  
+  .div-mat-expansn-panel-button {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .mat-expansn-panel-button {
+    background-color: #3393FF;
+    color: #FFFFFF;
+    border-radius: 5px;
+  }
+  
+    .mat-expansn-panel-button:hover {
+      background-color: #3388ff;
+      border-radius: 5px;
+    }
+  
+  /*.notes-card-containeer {
+    display: flex;
+    flex-direction: row;
+  }*/
+  
+  /*.notes-card {
+    width: 20vw !important;
+    border: 1px solid #dadce0 ;
+    border-radius:1em;
+  }*/
+  
+  .keep-c-note-container {
+    display: flex;
+    max-width: 95vw;
+    flex-wrap: wrap;
+    margin:auto;
+  }
+  
+  .keep-c-note-container {
+    margin-top: 20px;
+  }
+  
+  .example-chip-list {
+    width: 100%;
+  }
+  
+  .keep-note-card {
+    margin-right: 1em;
+    display: flex;
+    flex-direction: column;
+    width: 18vw;
+    border: 1px solid #dadce0;
+    border-radius: 1em;
+  }
+  
+  .keep-note-action-buttons {
+    margin-top:1em;
+  }
+  

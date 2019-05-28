@@ -1,0 +1,13 @@
+.keep-note-card {
+  margin-right: 1em;
+  display: flex;
+  flex-direction: column;
+  width: 18vw;
+  border: 1px solid #dadce0;
+  border-radius: 1em;
+  min-height: 15vw;
+}
+
+.keep-note-action-buttons {
+  margin-top:1em;
+}
